@@ -230,7 +230,7 @@ func (c *policyConf) restrictAshmemUsage(ctx android.ModuleContext) string {
 	if c.cts() {
 		return "cts"
 	}
-	return strconv.FormatBool(ctx.DeviceConfig().RestrictsAshmemUsage())
+	return "false"
 }
 
 func (c *policyConf) mlsCats() int {

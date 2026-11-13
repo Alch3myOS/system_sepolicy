@@ -415,10 +415,7 @@ se_versioned_policy {
 
 filegroup {
     name: "ashmem_build_file",
-    srcs: select(soong_config_variable("ANDROID", "TARGET_RESTRICTS_ASHMEM_USAGE"), {
-        false: ["vendor/ashmem/ashmem_allow.te"],
-        default: [],
-    }),
+    srcs: ["vendor/ashmem/ashmem_allow.te"],
 }
 
 // vendor_policy.cil - the vendor sepolicy. This needs attributization and to be combined
